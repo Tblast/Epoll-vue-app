@@ -145,7 +145,7 @@ const submitVote = async () => {
           if (index === selectedOptionIndex) {
             return {
               ...option,
-              votes: option.votes + 1
+              votes: option.votes
             }
           }
           return option
@@ -314,7 +314,7 @@ h1 {
 }
 
 .option.selected {
-  background-color: rgb(25, 220, 11);
+  background-color: #25D366;
 }
 
 .option.correct{
