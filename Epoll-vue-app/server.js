@@ -1,5 +1,6 @@
-const app = require('express')();
-const cors = require('cors')
+const express = require('express');
+const app = express();
+const cors = require('cors');
 const bodyParser = require('body-parser');
 
 //Enable CORS
@@ -41,6 +42,7 @@ app.get('/polls', (req, res) => {
     return {id: p.id, title: p.title};
   })};
   res.json(result);
+  console.log('tietoa on haettu');
 });
 
 
@@ -70,7 +72,7 @@ app.post('/polls/add', (req, res) => {
   res.json(poll);
 });
 
-const port = process.env.PORT ? process.env.PORT : 8081;
+const port = process.env.PORT ? process.env.PORT : 9000;
 const server = app.listen(port, () => {
     console.log("Server listening  port %s", port);
 });
