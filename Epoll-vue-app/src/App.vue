@@ -24,10 +24,6 @@ GetPolls();
         @click="CreatePollTrue">
           Create
         </button>
-        <button
-        @click="VoteTrue">
-          vote
-        </button>
       </td>
     </tr>
 

@@ -4,7 +4,7 @@ import axios from 'axios';
 export const GetPolls = async () => {
     try {
       const response = await axios.get('http://localhost:9000/polls');
-      console.log(response.data);
+      console.log('GetResponse',response.data);
       return response.data.polls;
     } catch (error) {
       console.log(error);
@@ -14,7 +14,7 @@ export const GetPolls = async () => {
 export const GetPollById = async (id) => {
     try {
       const response = await axios.get(`http://localhost:9000/polls/${id}`);
-      console.log('response', response.data);
+      console.log('GetByIdResponse', response.data);
       return response.data;
     } catch (error) {
       console.log(error);
@@ -24,8 +24,8 @@ export const GetPollById = async (id) => {
 export const CreatePoll = async () => {
     try {
       const response = await axios.post('http://localhost:9000/polls/add', newPoll);
-      console.log(response.data);
-      return response.data.poll;
+      console.log('CreatePollResponse', response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
     }
@@ -34,8 +34,8 @@ export const CreatePoll = async () => {
 export const VoteOption = async (id, option) => {
     try {
       const response = await axios.post(`http://localhost:9000/polls/${id}/vote/${option}`);
-      console.log(response.data);
-      return response.data.poll;
+      console.log('VoteOptionResponse', response.data);
+      return response.data;
     } catch (error) {
       console.log(error);
     }

@@ -42,7 +42,7 @@ app.get('/polls', (req, res) => {
     return {id: p.id, title: p.title};
   })};
   res.json(result);
-  console.log('tietoa on haettu');
+  console.log('tietoa on haettu GET');
 });
 
 
